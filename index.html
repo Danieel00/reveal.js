@@ -6,35 +6,266 @@
 
 		<title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background="Backgrounds/argentina_flag.jpg">
+					<h1 style="color:black">FINAL PROJECT</h1>
+					<h2 style="color:black">Análisis de los componentes del PBI de Argentina</h2>
+				</section>
+				<section>
+					<section data-background="Backgrounds/28365711028_ccbdc559f8_b.jpg" >
+						<h3>AGREGADOS MACROECONÓMICOS</h3>
+
+						<table display="block"; overflow-x="auto";>
+							 <tr>
+								 <caption> Instituto Nacional de Estadísticas y Censos (INDEC)</caption>
+								  <th style="font-size:80%;">Variables</th>
+									<td align="left" style="font-size:80%;">Descripción</th>
+							 </tr>
+							 <tr>
+								 <td style="font-size:50%;">GDP</td>
+								 <td align="left" style="font-size:50%;">Producto bruto interno </td>
+			        </tr>
+							<tr>
+								<td style="font-size:50%;">Consumptions</td>
+								<td align="left" style="font-size:50%;">Consumo realizado por los agentes económicos.</td>
+							</tr>
+							<tr>
+								<td style="font-size:50%;">Govt expenditure</td>
+								<td align="left" style="font-size:50%;">Gasto realizado por el estado.</td>
+							</tr>
+							<tr>
+								<td style="font-size:50%;">Exports</td>
+								<td align="left" style="font-size:50%;">Montos totalizados en concepto de exportaciones de bb. ss.</td>
+							</tr>
+							<tr>
+								<td style="font-size:50%;">Imports</td>
+								<td align="left" style="font-size:50%;">Montos totalizados en concepto de importaciones de bb. ss.</td>
+							</tr>
+							<tr>
+								<td style="font-size:50%;">Net Exports</td>
+								<td align="left" style="font-size:50%;">Flujos totalizados de exportaciones netas argentinas.</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				<section>
+					<section data-background="Backgrounds/argentina-map.jpg">
+						<h2 style="color:black">GRÁFICOS DE CADA SERIE</h2>
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ GDP </p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/P2/gdp.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Consumption</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/P2/consumo.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Government Expenditure</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/P2/gasto.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Investment</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/P2/investment.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Net Exports</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/P2/nx.jpeg" width="700" height="400">
+					</section>
+				</section>
+				<section>
+					<section data-background="Backgrounds/pqs-crecimiento-pbi.jpg" style="color:black">
+						<h2 style="color:black">Filtros HP, BK, BN y el componente cíclico.</h2>
+						<p>Se ha tomado logartimos de cada serie, excepto de las exportaciones netas (XN)</p>
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Filtro Hodrick-Prescott</h3>
+						<p align="left" style="color:black">✓ Consumption</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/HP_consumption.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Government Expenditure</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/HP_govtexpenditures.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Investment</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/HP_investment.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Net Exports</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/HP_netexports.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Filtro Baxter-King</h3>
+						<p align="left" style="color:black">✓ Consumption</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BK_consumption.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Government Expenditure</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BK_govtexpenditures.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Investment</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BK_investment.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Net Exports</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BK_netexports.png" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Descomposición de Beveridge-Nelson</h3>
+						<p align="left" style="color:black">✓ Consumption</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BN_consumption.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Government Expenditure</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BN_government.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Investment</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BN_investment.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black">✓ Net Exports</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p3/BN_netexports.png" width="700" height="400">
+					</section>
+				</section>
+				<section>
+					<section data-background="Backgrounds/ciclos.jpeg">
+						<h2>ANÁLISIS DEL CICLO ECONÓMICO</h2>
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Consumption</h3>
+						<p align="left" style="color:black;">Economic cycle</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/consumo.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_cons.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Government Expenditure</h3>
+						<p align="left" style="color:black;">Economic cycle</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/gasto.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_Gasto.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Investment</h3>
+						<p align="left" style="color:black;">Economic cycle</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/invers.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_Inv.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Imports</h3>
+						<p align="left" style="color:black;">Economic cycle</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/import.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_impor.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<h3 style="color:blue">Exports</h3>
+						<p align="left" style="color:black;">Economic cycle</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/export.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg">
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_export.jpeg" width="700" height="400">
+					</section>
+					<section data-background="Backgrounds/wh.jpg" style="color:black;">
+						<h3 style="color:blue">Net Exports</h3>
+						<p align="left" style="color:black;">Cyclicity</p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p4/cc_net.jpeg" width="700" height="400">
+					</section>
+				</section>
+				<section>
+					<section data-background="Backgrounds/volatilidad-mini-783x412.jpg" style="color:white;">
+						<h2 style="color:white;">Análisis de volatilidad del PBI</h2>
+					</section>
+					<section data-background="Backgrounds/wh.jpg" style="color:White;">
+						<p align="left" style="color:blue">Aplicamos el Filtro Hodrick-Prescott al <strong>logaritmo del GDP</strong></p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p5/HP_logGDP.jpeg" width="700" height="500">
+					</section>
+					<section data-background="Backgrounds/wh.jpg" style="color:White;">
+						<p align="left" style="color:blue">Aplicamos el Filtro Baxter-King al <strong>logaritmo del GDP</strong></p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p5/BK_logGDP.jpeg" width="700" height="500">
+					</section>
+					<section data-background="Backgrounds/wh.jpg" style="color:White;">
+						<p align="left" style="color:blue">Aplicamos la Descomposición de Beveridge-Nelson al <strong>logaritmo del GDP</strong></p>
+						<img style="border: none; box-shadow:none; shadow: none" src="EMA2/p5/BN_logGDP.jpeg" width="700" height="500">
+					</section>
+				</section>
+				<section>
+					<h3>CORRELACIONES DE LA VARAIBLES APLICANDO PEARSON</h3>
+
+					<table display="block"; overflow-x="auto";>
+						 <tr>
+							 <caption>Todas las variables se comparan con el GDP</caption>
+								<th style="font-size:80%;">Variables</th>
+								<td align="left" style="font-size:80%;">Nivel de correlación</th>
+						 </tr>
+						<tr>
+							<td style="font-size:50%;">Consumption</td>
+							<td align="left" style="font-size:50%;">0.1629172</td>
+						</tr>
+						<tr>
+							<td style="font-size:50%;">Govt expenditure</td>
+							<td align="left" style="font-size:50%;">0.3534565</td>
+						</tr>
+						<tr>
+							<td style="font-size:50%;">Net Exports</td>
+							<td align="left" style="font-size:50%;">0.32003</td>
+						</tr>
+						<tr>
+							<td style="font-size:50%;">Investment</td>
+							<td align="left" style="font-size:50%;">0.1790598</td>
+						</tr>
+					</table>
+				</section>
 			</div>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		<script src="js/reveal.js"></script>
+
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
 			});
 		</script>
+
 	</body>
 </html>
